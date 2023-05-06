@@ -135,7 +135,7 @@ if __name__ == "__main__":
     mesh = meshio.read(fURL + ".vtk")
     pointList = mesh.points
     pointNum = np.int64(len(pointList))
-    cellList = np.array(list(mesh.cells[1][1]))
+    cellList = np.array(mesh.cells[1].data)
     cellNum = len(cellList)
     print(pointNum, cellNum)
     print(pointNum.dtype)
